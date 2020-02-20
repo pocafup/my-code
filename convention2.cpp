@@ -11,14 +11,14 @@ LANG:C++
 using namespace std;
 
 int main(){
-  // ofstream cout("convention.out");
-  // ifstream cin ("convention.in");
+  ofstream fout("convention.out");
+  ifstream fin ("convention.in");
   int n,m,c;
-  cin >> n >> m >> c;
+  fin >> n >> m >> c;
   vector<int> d;
   int v;
   for (int i=0;i<n;i++){
-    cin >> v;
+    fin >> v;
     d.push_back(v);
   }
   int maxi = 0;
@@ -34,5 +34,5 @@ int main(){
       d.erase(d.begin(),d.begin()+d.size());
     }
   }
-  cout << maxi;
+  fout << maxi;
 }
